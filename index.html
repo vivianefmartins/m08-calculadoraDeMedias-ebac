@@ -15,9 +15,9 @@
             <img src="./images/logo.png" alt="capelo e diploma">
             <h1>Calculadora de Médias</h1>
         </header>
-        <form>
-            <input type="text" required placeholder="Nome da atividade"> <!--required é usado para informar ao HTML que esse input é obrigatório-->
-            <input type="number" required placeholder="Nota da atividade" min="0" max="10">
+        <form id="form-atividade">
+            <input type="text" id="nome-atividade" required placeholder="Nome da atividade"> <!--required é usado para informar ao HTML que esse input é obrigatório-->
+            <input type="number" id="nota-atividade" required placeholder="Nota da atividade" min="0" max="10">
             <button type="submit">Adicionar +</button>
         </form>
         <table cellspacing="0"> <!--cellspacing="0" - para tirar o espaçamento padrão das colunas-->
@@ -31,6 +31,7 @@
             </thead>
             <!--corpo da tabela-->
             <tbody> 
+                <!-- essa parte foi usada só para fim de estilização, agora que a implementação no JS já foi feita podemos retirar.
                 <tr>
                     <td>Atividade 1</td>
                     <td>7</td>
@@ -38,18 +39,20 @@
                         <img src="./images/aprovado.png" alt="Emoji festejando">
                     </td>
                 </tr>
+                -->
             </tbody>
             <!--rodapé da tabela-->
             <tfoot>
                 <tr>
                     <td>Média Final</td>
-                    <td>7</td>
-                    <td>
-                        <span class="resultado aprovado">Aprovado</span>
+                    <td id="media-final-valor">---</td>
+                    <td id="media-final-resultado">---
+                        <!--<span class="resultado aprovado">Aprovado</span>-->
                     </td>
                 </tr>
             </tfoot>
         </table>
     </div>
+    <script src="./main.js"></script>
 </body>
 </html>
